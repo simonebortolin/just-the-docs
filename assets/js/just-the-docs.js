@@ -479,6 +479,38 @@ jtd.onReady(function(){
   scrollNav();
 });
 
+jtd.onReady(function(){
+  // Copy button on code
+
+  var codeBlocks = document.querySelectorAll('div.highlighter-rouge, div.listingblock, figure.highlight');
+
+  var svgCopied =  '<svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copied"></use></svg>';
+  var svgCopy =  '<svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copy"></use></svg>';
+
+  [...codeBlocks].forEach(codeBlock => {
+    var copyButton = document.createElement('button');
+    copyButton.type = 'button';
+    copyButton.ariaLabel = 'Copy code to clipboard';
+    copyButton.innerHTML = svgCopy;
+    codeBlock.append(copyButton);
+
+    copyButton.addEventListener('click', function () {
+      var code = codeBlock.querySelector('code').innerText.trim();
+      window.navigator.clipboard.writeText(code);
+
+      copyButton.innerHTML = svgCopied;
+      var fourSeconds = 4000;
+
+      setTimeout(function () {
+        copyButton.innerHTML = svgCopy;
+      }, fourSeconds);
+    });
+  });
+
+});
+
 })(window.jtd = window.jtd || {});
+
+
 
 {% include js/custom.js %}
