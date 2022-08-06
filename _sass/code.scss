@@ -338,3 +338,24 @@ figure.highlight {
     border-top-right-radius: 0;
   }
 }
+
+pre.highlight {
+	>button {
+		opacity: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		&:active {
+			opacity: 1;
+		}
+		&:focus {
+			opacity: 1;
+		}
+	}
+	&:hover {
+		>button {
+			opacity: 1;
+		}
+	}
+	position: relative;
+}
