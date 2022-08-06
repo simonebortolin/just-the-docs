@@ -202,4 +202,8 @@ body {
   width: $sp-5;
   height: $sp-5;
   color: $link-color;
+
+  svg {
+    fill: $body-text-color;
+  }
 }
