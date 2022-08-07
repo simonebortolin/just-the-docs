@@ -34,6 +34,10 @@ $blue: #2c84fa !default;
 $green: #11b584 !default;
 $yellow: #fadf50 !default;
 $red: #f96e65 !default;
+$success : #198754 !default;
+$error : #dc3545 !default;
+$primary : $purple !default;
+$secondary : $grey !default;
 
 $colors: (
   "grey":       $grey,
@@ -41,7 +45,11 @@ $colors: (
   "purple":     $purple,
   "red":        $red,
   "yellow":     $yellow,
-  "green":      $green
+  "green":      $green,
+  "success":    $success,
+  "error":      $error,
+  "primary":    $primary,
+  "secondary":  $secondary
 ) !default;
 
 $grey-000: tint-color($grey, 80%) !default;
@@ -177,17 +185,107 @@ $reds: (
   "red-800": $red-800
 ) !default;
 
+$success-000: tint-color($success, 80%) !default;
+$success-100: tint-color($success, 60%) !default;
+$success-200: tint-color($success, 40%) !default;
+$success-300: tint-color($success, 20%) !default;
+$success-400: $success !default;
+$success-500: shade-color($success, 20%) !default;
+$success-600: shade-color($success, 40%) !default;
+$success-700: shade-color($success, 60%) !default;
+$success-800: shade-color($success, 80%) !default;
+
+$successes: (
+  "success-000": $success-000,
+  "success-100": $success-100,
+  "success-200": $success-200,
+  "success-300": $success-300,
+  "success-400": $success-400,
+  "success-500": $success-500,
+  "success-600": $success-600,
+  "success-700": $success-700,
+  "success-800": $success-800
+) !default;
+
+$error-000: tint-color($error, 80%) !default;
+$error-100: tint-color($error, 60%) !default;
+$error-200: tint-color($error, 40%) !default;
+$error-300: tint-color($error, 20%) !default;
+$error-400: $error !default;
+$error-500: shade-color($error, 20%) !default;
+$error-600: shade-color($error, 40%) !default;
+$error-700: shade-color($error, 60%) !default;
+$error-800: shade-color($error, 80%) !default;
+
+$errors: (
+  "error-000": $error-000,
+  "error-100": $error-100,
+  "error-200": $error-200,
+  "error-300": $error-300,
+  "error-400": $error-400,
+  "error-500": $error-500,
+  "error-600": $error-600,
+  "error-700": $error-700,
+  "error-800": $error-800
+) !default;
+
+$primary-000: tint-color($primary, 80%) !default;
+$primary-100: tint-color($primary, 60%) !default;
+$primary-200: tint-color($primary, 40%) !default;
+$primary-300: tint-color($primary, 20%) !default;
+$primary-400: $primary !default;
+$primary-500: shade-color($primary, 20%) !default;
+$primary-600: shade-color($primary, 40%) !default;
+$primary-700: shade-color($primary, 60%) !default;
+$primary-800: shade-color($primary, 80%) !default;
+
+$primaries: (
+  "primary-000": $primary-000,
+  "primary-100": $primary-100,
+  "primary-200": $primary-200,
+  "primary-300": $primary-300,
+  "primary-400": $primary-400,
+  "primary-500": $primary-500,
+  "primary-600": $primary-600,
+  "primary-700": $primary-700,
+  "primary-800": $primary-800
+) !default;
+
+$secondary-000: tint-color($secondary, 80%) !default;
+$secondary-100: tint-color($secondary, 60%) !default;
+$secondary-200: tint-color($secondary, 40%) !default;
+$secondary-300: tint-color($secondary, 20%) !default;
+$secondary-400: $secondary !default;
+$secondary-500: shade-color($secondary, 20%) !default;
+$secondary-600: shade-color($secondary, 40%) !default;
+$secondary-700: shade-color($secondary, 60%) !default;
+$secondary-800: shade-color($secondary, 80%) !default;
+
+$secondaries: (
+  "secondary-000": $secondary-000,
+  "secondary-100": $secondary-100,
+  "secondary-200": $secondary-200,
+  "secondary-300": $secondary-300,
+  "secondary-400": $secondary-400,
+  "secondary-500": $secondary-500,
+  "secondary-600": $secondary-600,
+  "secondary-700": $secondary-700,
+  "secondary-800": $secondary-800
+) !default;
+
 $colors-shades: (
   "grey":       $greys,
   "blue":       $blues,
   "purple":     $purples,
   "red":        $reds,
   "yellow":     $yellows,
-  "green":      $greens
+  "green":      $greens,
+  "success":    $successes,
+  "error":      $errors,
+  "primary":    $primaries,
+  "secondary":  $secondaries
 ) !default;
 
-$primary-color: $purple !default;
-$primary-colors: $purples !default;
 
 $body-background-color: $white !default;
 $sidebar-color: $grey-000 !default;
@@ -200,8 +298,8 @@ $body-text-color: $grey-500 !default;
 $body-heading-color: $grey-800 !default;
 $search-result-preview-color: $grey-400 !default;
 $nav-child-link-color: $grey-500 !default;
-$link-color: $primary-color !default;
-$btn-primary-color: $primary-color !default;
+$link-color: $primary !default;
+$btn-primary-color: $primary !default;
 $base-button-color: #f7f7f7 !default;
 
 // Spacing
