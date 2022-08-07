@@ -28,7 +28,7 @@ $font-size-10-sm: 48px !default;
 
 $white: #fff !default;
 
-$grey: #959396 !default;
+$grey: #959396  !default;
 $purple: #5e41d0 !default;
 $blue: #2c84fa !default;
 $green: #11b584 !default;
@@ -36,7 +36,7 @@ $yellow: #fadf50 !default;
 $red: #f96e65 !default;
 $success : #198754 !default;
 $error : #dc3545 !default;
-$primary : $purple !default;
+$primary : $blue !default;
 $secondary : $grey !default;
 
 $colors: (
@@ -52,15 +52,15 @@ $colors: (
   "secondary":  $secondary
 ) !default;
 
-$grey-000: tint-color($grey, 80%) !default;
-$grey-100: tint-color($grey, 60%) !default;
-$grey-200: tint-color($grey, 40%) !default;
-$grey-300: tint-color($grey, 20%) !default;
-$grey-400: $grey !default;
-$grey-500: shade-color($grey, 20%) !default;
-$grey-600: shade-color($grey, 40%) !default;
-$grey-700: shade-color($grey, 60%) !default;
-$grey-800: shade-color($grey, 80%) !default;
+$grey-000: #f5f6fa  !default;
+$grey-100: #eeebee  !default;
+$grey-200: #ecebed  !default;
+$grey-300: #e6e1e8  !default;
+$grey-400: $grey      !default;
+$grey-500: #5c5962  !default;
+$grey-600: #44434d  !default;
+$grey-700: #302d36  !default;
+$grey-800: #27262b  !default;
 
 $greys: (
   "grey-000": $grey-000,
@@ -365,7 +365,6 @@ $media-queries: (
 
 $form-select-indicator-color:  $body-text-color !default;
 $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !default;
-
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (
   ("<", "%3c"),
