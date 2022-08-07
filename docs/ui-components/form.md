@@ -60,39 +60,7 @@ Block-level or inline-level form text can be created using `.form-text`.
   Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
 </div>
 ```
-Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
 
-
-<div class="code-example" markdown="1">
-<div class="row g-3 align-items-center">
-  <div class="col-auto">
-    <label for="inputPassword6" class="col-form-label">Password</label>
-  </div>
-  <div class="col-auto">
-    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-  </div>
-  <div class="col-auto">
-    <span id="passwordHelpInline" class="form-text">
-      Must be 8-20 characters long.
-    </span>
-  </div>
-</div>
-</div>
-```markdown
-<div class="row g-3 align-items-center">
-  <div class="col-auto">
-    <label for="inputPassword6" class="col-form-label">Password</label>
-  </div>
-  <div class="col-auto">
-    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-  </div>
-  <div class="col-auto">
-    <span id="passwordHelpInline" class="form-text">
-      Must be 8-20 characters long.
-    </span>
-  </div>
-</div>
-```
 ## Disabled forms 
 Add the `disabled` boolean attribute on an input to prevent user interactions and make it appear lighter.
 
