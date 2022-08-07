@@ -207,4 +207,23 @@ body {
   svg {
     fill: $body-text-color;
   }
+
+  &.icon-btn {
+    outline: none;
+    background: transparent;
+    border: 0;
+    color: $body-text-color;
+  
+    &:not(:disabled):not([readonly]):not(.disabled) {
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+        outline: none;
+        color: $link-color;
+
+        svg {
+          fill: $link-color;
+        }
+      }
+  }
+  }
 }
