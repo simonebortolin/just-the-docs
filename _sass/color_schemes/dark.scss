@@ -5,12 +5,11 @@ $body-text-color: $grey-400;
 $body-heading-color: $grey-000;
 $nav-child-link-color: $grey-400;
 $search-result-preview-color: $grey-400;
-$base-button-color: $grey-700;
+$btn-base-color: $grey-700;
 $search-background-color: $grey-700;
 $table-background-color: $grey-700;
 $feedback-color: darken($sidebar-color, 3%);
-$primary : $blue;
-$primaries : $blues;
+
 
 // The following highlight theme is more legible than that used for the light color scheme
 
@@ -31,6 +30,16 @@ $code-background-color: #31343f;
 $form-inner-box-shadow: inset 0 0 0 2px $grey-600;
 $form-disabled-background-color: $grey-700;
 $form-disabled-color: $grey-500;
-$form-disabled-primary-color: $primary-300;
+$form-disabled-primary-color: $green-300;
 $form-check-background-color: $grey-800;
 $form-check-inner-box-shadow: inset 0 0 0 1px $grey-600;
+
+// Theme color
+$link-color: $green;
+$btn-primary-color: $green;
+$btn-inner-box-shadow-active: inset 0 0 0 2px $btn-primary-color ;
+$form-primary-color: $green ;
+$form-inner-box-shadow-active: inset 0 0 0 2px $form-primary-color ;
+$form-outer-box-shadow-active: 0 0 0 3px rgba($form-primary-color, 0.25)  ;
+$form-disabled-primary-color: $green-100;
+$form-check-inner-box-shadow-active: inset 0 0 0 1px $form-primary-color ;

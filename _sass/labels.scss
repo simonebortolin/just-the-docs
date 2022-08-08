@@ -11,10 +11,10 @@
   color: $white;
   text-transform: uppercase;
   vertical-align: middle;
-  background-color: $primary;
+  background-color: $label-background-color;
   @include fs-2;
 
-  border-radius: 12px;
+  border-radius: $label-border-radius;
 
   @each $color, $value in $colors {
     &.label-#{$color} {
