@@ -29,15 +29,15 @@
     }
 }
 .form-control, .form-select {
-    box-shadow:  inset 0 0 0 2px $grey-300;
+    box-shadow:  $form-inner-box-shadow;
 
     &:not(:disabled):not([readonly]):not(.disabled) {
         &:hover {
-            box-shadow: inset 0 0 0 2px $primary;
+            box-shadow: $form-inner-box-shadow-active;
         }
 
         &:active, &:focus  {
-            box-shadow: inset 0 0 0 2px $primary, 0 0 0 3px rgba($btn-primary-color, 0.25);
+            box-shadow: $form-inner-box-shadow-active, $form-outer-box-shadow-active;
         }
     }
     
@@ -46,9 +46,9 @@
         opacity: 1;
         &,
         &:hover {
-            color: $grey-400;
+            color: $form-disabled-color;
             cursor: default;
-            background-color: $grey-100;
+            background-color: $form-disabled-background-color;
         }
     }
 }
@@ -59,6 +59,87 @@
     
         &:not(:disabled):not([readonly]) {
           cursor: pointer;
+        }
+
+        &::-ms-browse {
+            padding-top: 0.3em;
+            padding-right: 1em;
+            padding-bottom: 0.3em;
+            padding-left: 1em;
+            margin-top: -0.3em;
+            margin-bottom: -0.3em;
+            margin-left: -1em;
+            pointer-events: none;
+            border-color: inherit;
+            border-style: solid;
+            border-width: 0;
+            appearance: none;
+            color: $link-color;
+            background: transparent;
+            box-shadow: $form-inner-box-shadow;
+
+            
+        } 
+        &::-webkit-file-upload-button {
+            padding-top: 0.3em;
+            padding-right: 1em;
+            padding-bottom: 0.3em;
+            padding-left: 1em;
+            margin-top: -0.3em;
+            margin-bottom: -0.3em;
+            margin-left: -1em;
+            pointer-events: none;
+            border-color: inherit;
+            border-style: solid;
+            border-width: 0;
+            appearance: none;
+            color: $link-color;
+            background: transparent;
+            box-shadow: $form-inner-box-shadow;
+        } 
+        &::file-selector-button {
+            padding-top: 0.3em;
+            padding-right: 1em;
+            padding-bottom: 0.3em;
+            padding-left: 1em;
+            margin-top: -0.3em;
+            margin-bottom: -0.3em;
+            margin-left: -1em;
+            pointer-events: none;
+            border-color: inherit;
+            border-style: solid;
+            border-width: 0;
+            appearance: none;
+            color: $link-color;
+            background: transparent;
+            box-shadow: $form-inner-box-shadow;
+
+        
+        }
+        &:not(:disabled):not([readonly]):not(.disabled) {
+            &:hover, &:active, &:focus {
+                &::-ms-browse {
+                    box-shadow: $form-inner-box-shadow-active;
+                }
+                &::-webkit-file-upload-button {
+                    box-shadow: $form-inner-box-shadow-active;
+                }
+                &::file-selector-button {
+                    box-shadow: $form-inner-box-shadow-active;
+                }
+            }
+        }
+
+        &:disabled, &.disabled  {
+            &::-ms-browse {
+                color: $form-disabled-primary-color;
+            }
+            &::-webkit-file-upload-button {
+                color: $form-disabled-primary-color;
+            }
+            &::file-selector-button {
+                color: $form-disabled-primary-color;
+            }
         }
     }
     
@@ -136,84 +217,86 @@ legend {
     margin-bottom: 0.125rem;
     vertical-align: middle;
 
-    .form-check-input {
+    
+}
 
-        width: 1em;
-        height: 1em;
-        margin-top: 0.25em;
-        vertical-align: top;
-        background-color: #fff;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        box-shadow: inset 0 0 0 1px $grey-300;
-        appearance: none;
-        -webkit-print-color-adjust: exact;
-        color-adjust: exact;
-        print-color-adjust: exact;
+.form-check .form-check-input, .task-list-item .task-list-item-checkbox {
 
-        &[type=checkbox] {
-            border-radius: 0.25em;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.25em;
+    vertical-align: top;
+    background-color: $form-check-background-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    box-shadow: $form-check-inner-box-shadow;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    print-color-adjust: exact;
+
+    &[type=checkbox] {
+        border-radius: 0.25em;
+    }
+    &[type=radio] {
+        border-radius: 50%;
+    }
+    &:not(:disabled):not(.disabled):not([disabled]) {
+        &:hover, &:active, &:focus {
+            box-shadow: $form-check-inner-box-shadow-active, $form-outer-box-shadow-active;
+            text-decoration: none;
+            outline: none;
         }
-        &[type=radio] {
-            border-radius: 50%;
-        }
-        &:not(:disabled):not(.disabled):not([disabled]) {
-            &:hover, &:active, &:focus {
-                box-shadow: inset 0 0 0 1px $primary, 0 0 0 3px rgba($btn-primary-color, 0.25);
-                text-decoration: none;
-                outline: none;
+
+
+        &:checked {
+            background-color: $form-primary-color;
+            box-shadow: $form-check-inner-box-shadow-active;
+
+            &[type=checkbox] {
+                background-image: escape-svg($form-check-input-checked-bg-image);
             }
-
-
-            &:checked {
-                background-color: $primary;
-                box-shadow: inset 0 0 0 1px $primary;
-
-                &[type=checkbox] {
-                    background-image: escape-svg($form-check-input-checked-bg-image);
-                }
-                &[type=radio] {
-                    background-image: escape-svg($form-check-radio-checked-bg-image);
-                }
-            }
-
-            &:indeterminate[type=checkbox] {
-                background-color: $primary;
-                box-shadow: inset 0 0 0 1px $primary;
-                background-image: escape-svg($form-check-input-indeterminate-bg-image);
+            &[type=radio] {
+                background-image: escape-svg($form-check-radio-checked-bg-image);
             }
         }
 
-        &:disabled,
-        &.disabled,
-        &[disabled] {
-            &,
-            &:hover {
-                cursor: default;
-                background-color: $grey-100;
-                background-image: none;
-            }
+        &:indeterminate[type=checkbox] {
+            background-color: $form-primary-color;
+            box-shadow: $form-check-inner-box-shadow-active;
+            background-image: escape-svg($form-check-input-indeterminate-bg-image);
+        }
+    }
 
-            &:checked {
-                background-color: $primary-100;
-                &[type=checkbox] {
-                    background-image: escape-svg($form-check-input-checked-bg-image);
-                }
-                &[type=radio] {
-                    background-image: escape-svg($form-check-radio-checked-bg-image);
-                }
-            }
+    &:disabled,
+    &.disabled,
+    &[disabled] {
+        &,
+        &:hover {
+            cursor: default;
+            background-color: $form-disabled-background-color;
+            background-image: none;
+        }
 
-            &:indeterminate[type=checkbox] {
-                background-color: $primary-100;
-                background-image: escape-svg($form-check-input-indeterminate-bg-image);
+        &:checked {
+            background-color: $form-disabled-primary-color;
+            &[type=checkbox] {
+                background-image: escape-svg($form-check-input-checked-bg-image);
             }
+            &[type=radio] {
+                background-image: escape-svg($form-check-radio-checked-bg-image);
+            }
+        }
 
-            &~.form-check-label {
-                cursor: default;
-                opacity: .5;
-            }
+        &:indeterminate[type=checkbox] {
+            background-color: $form-disabled-primary-color;
+            background-image: escape-svg($form-check-input-indeterminate-bg-image);
+        }
+
+        &~.form-check-label {
+            cursor: default;
+            color: $form-disabled-color;
         }
     }
 }

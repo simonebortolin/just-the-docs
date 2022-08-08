@@ -26,3 +26,11 @@ $code-background-color: #31343f;
 
 // @import "./vendor/OneDarkJekyll/syntax-firewatch-green";
 // $code-background-color: #282c34;
+
+
+$form-inner-box-shadow: inset 0 0 0 2px $grey-600;
+$form-disabled-background-color: $grey-700;
+$form-disabled-color: $grey-500;
+$form-disabled-primary-color: $primary-300;
+$form-check-background-color: $grey-800;
+$form-check-inner-box-shadow: inset 0 0 0 1px $grey-600;
