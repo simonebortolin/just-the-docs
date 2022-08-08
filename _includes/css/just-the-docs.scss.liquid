@@ -2,8 +2,8 @@
 $logo: "{{ site.logo | relative_url }}";
 {% endif %}
 @import "./support/support";
-{% if include.primary_colors %}
-@import "./primary_colors/{{ include.primary_colors }}";
+{% if include.primary_color %}
+@import "./primary_colors/{{ include.primary_color }}";
 {% endif %}
 @import "./color_schemes/{{ include.color_scheme }}";
 @import "./modules";
