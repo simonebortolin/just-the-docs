@@ -76,6 +76,9 @@ aux_links_new_tab: false
 # nav_sort: case_insensitive # default, equivalent to nil
 nav_sort: case_sensitive # Capital letters sorted before lowercase
 
+# Caching navigation links
+nav_cache: true # default, equivalent to nil
+
 # External navigation links
 nav_external_links:
   - title: Just the Docs on GitHub
@@ -114,6 +117,7 @@ ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (t
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-include-cache
 
 kramdown:
   syntax_highlighter_opts:
