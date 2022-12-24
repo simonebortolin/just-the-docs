@@ -1,7 +1,6 @@
 // Labels (not the form kind)
 
-.label,
-.label-blue {
+.label {
   display: inline-block;
   padding-top: 0.16em;
   padding-right: 0.56em;
@@ -12,25 +11,14 @@
   color: $white;
   text-transform: uppercase;
   vertical-align: middle;
-  background-color: $blue-100;
+  background-color: $label-background-color;
   @include fs-2;
 
-  border-radius: 12px;
-}
+  border-radius: $label-border-radius;
 
-.label-green {
-  background-color: $green-200;
-}
-
-.label-purple {
-  background-color: $purple-100;
-}
-
-.label-red {
-  background-color: $red-200;
-}
-
-.label-yellow {
-  color: $grey-dk-200;
-  background-color: $yellow-200;
+  @each $color, $value in $colors {
+    &.label-#{$color} {
+      background-color: $value;
+    }
+  }
 }
