@@ -1,0 +1,30 @@
+.alert {
+  padding: $sp-3;
+  margin-bottom: $sp-3;
+  overflow: auto;
+  border: $border $border-color;
+  border-radius: $border-radius;
+
+  svg {
+    height: $spacing-unit;
+    margin-right: 0.5 * $spacing-unit;
+    width: $spacing-unit;
+  }
+
+  @each $color, $colors in $colors-shades {
+    &.alert-#{$color} {
+      color: map-get($colors, "#{$color}-600");
+      border-color: map-get($colors, "#{$color}-100");
+      background-color: map-get($colors, "#{$color}-000");
+
+      svg {
+        fill: map-get($colors, "#{$color}-600");
+      }
+
+      code {
+        background-color: map-get($colors, "#{$color}-100");
+        border: $border map-get($colors, "#{$color}-500");
+      }
+    }
+  }
+}
