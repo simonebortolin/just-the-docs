@@ -27,53 +27,252 @@ $font-size-10-sm: 48px !default;
 // Colors
 
 $white: #fff !default;
-$grey-dk-000: #959396 !default;
-$grey-dk-100: #5c5962 !default;
-$grey-dk-200: #44434d !default;
-$grey-dk-250: #302d36 !default;
-$grey-dk-300: #27262b !default;
-$grey-lt-000: #f5f6fa !default;
-$grey-lt-100: #eeebee !default;
-$grey-lt-200: #ecebed !default;
-$grey-lt-300: #e6e1e8 !default;
-$purple-000: #7253ed !default;
-$purple-100: #5e41d0 !default;
-$purple-200: #4e26af !default;
-$purple-300: #381885 !default;
-$blue-000: #2c84fa !default;
-$blue-100: #2869e6 !default;
-$blue-200: #264caf !default;
-$blue-300: #183385 !default;
-$green-000: #41d693 !default;
-$green-100: #11b584 !default;
-$green-200: #009c7b !default;
-$green-300: #026e57 !default;
-$yellow-000: #ffeb82 !default;
-$yellow-100: #fadf50 !default;
-$yellow-200: #f7d12e !default;
-$yellow-300: #e7af06 !default;
-$red-000: #f77e7e !default;
-$red-100: #f96e65 !default;
-$red-200: #e94c4c !default;
-$red-300: #dd2e2e !default;
-$body-background-color: $white !default;
-$sidebar-color: $grey-lt-000 !default;
-$search-background-color: $white !default;
-$table-background-color: $white !default;
-$code-background-color: $grey-lt-000 !default;
-$feedback-color: darken($sidebar-color, 3%) !default;
-$body-text-color: $grey-dk-100 !default;
-$body-heading-color: $grey-dk-300 !default;
-$search-result-preview-color: $grey-dk-000 !default;
-$nav-child-link-color: $grey-dk-100 !default;
-$link-color: $purple-000 !default;
-$btn-primary-color: $purple-100 !default;
-$base-button-color: #f7f7f7 !default;
+$grey: #959396 !default;
+$purple: #5e41d0 !default;
+$blue: #2c84fa !default;
+$green: #11b584 !default;
+$yellow: #fadf50 !default;
+$red: #f96e65 !default;
+$success: #198754 !default;
+$error: #dc3545 !default;
+
+// Colors array
+
+$colors: (
+  "grey": $grey,
+  "blue": $blue,
+  "purple": $purple,
+  "red": $red,
+  "yellow": $yellow,
+  "green": $green,
+  "success": $success,
+  "error": $error,
+) !default;
+
+// Grey
+
+$grey-000: #f5f6fa !default;
+$grey-100: #eeebee !default;
+$grey-200: #ecebed !default;
+$grey-300: #e6e1e8 !default;
+$grey-400: $grey !default;
+$grey-500: #5c5962 !default;
+$grey-600: #44434d !default;
+$grey-700: #302d36 !default;
+$grey-800: #27262b !default;
+
+// Grey array
+
+$greys: (
+  "grey-000": $grey-000,
+  "grey-100": $grey-100,
+  "grey-200": $grey-200,
+  "grey-300": $grey-300,
+  "grey-400": $grey-400,
+  "grey-500": $grey-500,
+  "grey-600": $grey-600,
+  "grey-700": $grey-700,
+  "grey-800": $grey-800,
+) !default;
+
+// Purple
+
+$purple-000: tint-color($purple, 80%) !default;
+$purple-100: tint-color($purple, 60%) !default;
+$purple-200: tint-color($purple, 40%) !default;
+$purple-300: tint-color($purple, 20%) !default;
+$purple-400: $purple !default;
+$purple-500: shade-color($purple, 20%) !default;
+$purple-600: shade-color($purple, 40%) !default;
+$purple-700: shade-color($purple, 60%) !default;
+$purple-800: shade-color($purple, 80%) !default;
+
+// Purple array
+
+$purples: (
+  "purple-000": $purple-000,
+  "purple-100": $purple-100,
+  "purple-200": $purple-200,
+  "purple-300": $purple-300,
+  "purple-400": $purple-400,
+  "purple-500": $purple-500,
+  "purple-600": $purple-600,
+  "purple-700": $purple-700,
+  "purple-800": $purple-800,
+) !default;
+
+// Blue
+
+$blue-000: tint-color($blue, 80%) !default;
+$blue-100: tint-color($blue, 60%) !default;
+$blue-200: tint-color($blue, 40%) !default;
+$blue-300: tint-color($blue, 20%) !default;
+$blue-400: $blue !default;
+$blue-500: shade-color($blue, 20%) !default;
+$blue-600: shade-color($blue, 40%) !default;
+$blue-700: shade-color($blue, 60%) !default;
+$blue-800: shade-color($blue, 80%) !default;
+
+// Blue array
+
+$blues: (
+  "blue-000": $blue-000,
+  "blue-100": $blue-100,
+  "blue-200": $blue-200,
+  "blue-300": $blue-300,
+  "blue-400": $blue-400,
+  "blue-500": $blue-500,
+  "blue-600": $blue-600,
+  "blue-700": $blue-700,
+  "blue-800": $blue-800,
+) !default;
+
+// Green
+
+$green-000: tint-color($green, 80%) !default;
+$green-100: tint-color($green, 60%) !default;
+$green-200: tint-color($green, 40%) !default;
+$green-300: tint-color($green, 20%) !default;
+$green-400: $green !default;
+$green-500: shade-color($green, 20%) !default;
+$green-600: shade-color($green, 40%) !default;
+$green-700: shade-color($green, 60%) !default;
+$green-800: shade-color($green, 80%) !default;
+
+// Green array
+
+$greens: (
+  "green-000": $green-000,
+  "green-100": $green-100,
+  "green-200": $green-200,
+  "green-300": $green-300,
+  "green-400": $green-400,
+  "green-500": $green-500,
+  "green-600": $green-600,
+  "green-700": $green-700,
+  "green-800": $green-800,
+) !default;
+
+// Yellow
+
+$yellow-000: tint-color($yellow, 80%) !default;
+$yellow-100: tint-color($yellow, 60%) !default;
+$yellow-200: tint-color($yellow, 40%) !default;
+$yellow-300: tint-color($yellow, 20%) !default;
+$yellow-400: $yellow !default;
+$yellow-500: shade-color($yellow, 20%) !default;
+$yellow-600: shade-color($yellow, 40%) !default;
+$yellow-700: shade-color($yellow, 60%) !default;
+$yellow-800: shade-color($yellow, 80%) !default;
+
+// Yellow array
+
+$yellows: (
+  "yellow-000": $yellow-000,
+  "yellow-100": $yellow-100,
+  "yellow-200": $yellow-200,
+  "yellow-300": $yellow-300,
+  "yellow-400": $yellow-400,
+  "yellow-500": $yellow-500,
+  "yellow-600": $yellow-600,
+  "yellow-700": $yellow-700,
+  "yellow-800": $yellow-800,
+) !default;
+
+// Red
+
+$red-000: tint-color($red, 80%) !default;
+$red-100: tint-color($red, 60%) !default;
+$red-200: tint-color($red, 40%) !default;
+$red-300: tint-color($red, 20%) !default;
+$red-400: $red !default;
+$red-500: shade-color($red, 20%) !default;
+$red-600: shade-color($red, 40%) !default;
+$red-700: shade-color($red, 60%) !default;
+$red-800: shade-color($red, 80%) !default;
+
+// Red array
+
+$reds: (
+  "red-000": $red-000,
+  "red-100": $red-100,
+  "red-200": $red-200,
+  "red-300": $red-300,
+  "red-400": $red-400,
+  "red-500": $red-500,
+  "red-600": $red-600,
+  "red-700": $red-700,
+  "red-800": $red-800,
+) !default;
+
+// Success
+
+$success-000: tint-color($success, 80%) !default;
+$success-100: tint-color($success, 60%) !default;
+$success-200: tint-color($success, 40%) !default;
+$success-300: tint-color($success, 20%) !default;
+$success-400: $success !default;
+$success-500: shade-color($success, 20%) !default;
+$success-600: shade-color($success, 40%) !default;
+$success-700: shade-color($success, 60%) !default;
+$success-800: shade-color($success, 80%) !default;
+
+// Success array
+
+$successes: (
+  "success-000": $success-000,
+  "success-100": $success-100,
+  "success-200": $success-200,
+  "success-300": $success-300,
+  "success-400": $success-400,
+  "success-500": $success-500,
+  "success-600": $success-600,
+  "success-700": $success-700,
+  "success-800": $success-800,
+) !default;
+
+// Error
+
+$error-000: tint-color($error, 80%) !default;
+$error-100: tint-color($error, 60%) !default;
+$error-200: tint-color($error, 40%) !default;
+$error-300: tint-color($error, 20%) !default;
+$error-400: $error !default;
+$error-500: shade-color($error, 20%) !default;
+$error-600: shade-color($error, 40%) !default;
+$error-700: shade-color($error, 60%) !default;
+$error-800: shade-color($error, 80%) !default;
+
+// Error array
+
+$errors: (
+  "error-000": $error-000,
+  "error-100": $error-100,
+  "error-200": $error-200,
+  "error-300": $error-300,
+  "error-400": $error-400,
+  "error-500": $error-500,
+  "error-600": $error-600,
+  "error-700": $error-700,
+  "error-800": $error-800,
+) !default;
+
+// Colors shades array
+
+$colors-shades: (
+  "grey": $greys,
+  "blue": $blues,
+  "purple": $purples,
+  "red": $reds,
+  "yellow": $yellows,
+  "green": $greens,
+  "success": $successes,
+  "error": $errors,
+) !default;
 
 // Spacing
 
 $spacing-unit: 1rem; // 1rem == 16px
-
 $spacers: (
   sp-0: 0,
   sp-1: $spacing-unit * 0.25,
@@ -102,21 +301,40 @@ $sp-10: map-get($spacers, sp-10) !default; // 4  rem == 64px
 
 $border: 1px solid !default;
 $border-radius: 4px !default;
-$border-color: $grey-lt-100 !default;
+$border-color: $grey-100 !default;
 
 // Grid system
 
 $gutter-spacing: $sp-6 !default;
 $gutter-spacing-sm: $sp-4 !default;
-$nav-width: 264px !default;
+
+// Nav
+
 $nav-width-md: 248px !default;
 $nav-list-item-height: $sp-6 !default;
 $nav-list-item-height-sm: $sp-8 !default;
 $nav-list-expander-right: true;
-$content-width: 800px !default;
+$nav-width: 264px !default;
 $header-height: 60px !default;
+$content-width: 800px !default;
 $search-results-width: $content-width - $nav-width !default;
 $transition-duration: 400ms;
+
+// Page
+
+$sidebar-color: $grey-000 !default;
+$search-background-color: $white !default;
+$table-background-color: $white !default;
+$feedback-color: darken($sidebar-color, 3%) !default;
+$search-result-preview-color: $grey-400 !default;
+$nav-child-link-color: $grey-500 !default;
+
+// Body
+
+$body-background-color: $white !default;
+$body-text-color: $grey-500 !default;
+$body-heading-color: $grey-800 !default;
+$code-background-color: $grey-000 !default;
 
 // Media queries in pixels
 
@@ -127,3 +345,51 @@ $media-queries: (
   lg: $content-width + $nav-width,
   xl: 1400px,
 ) !default;
+
+// Link
+$link-color: $purple !default;
+
+// Btn
+
+$btn-primary-color: $purple !default;
+$btn-base-color: #f7f7f7 !default;
+$btn-inner-box-shadow: inset 0 0 0 2px $grey-300 !default;
+$btn-inner-box-shadow-active: inset 0 0 0 2px $btn-primary-color !default;
+
+// Form
+
+$form-primary-color: $purple !default;
+$form-inner-box-shadow: inset 0 0 0 2px $grey-300 !default;
+$form-inner-box-shadow-active: inset 0 0 0 2px $form-primary-color !default;
+$form-outer-box-shadow-active: 0 0 0 3px rgba($form-primary-color, 0.25) !default;
+$form-disabled-background-color: $grey-100 !default;
+$form-disabled-color: $grey-400 !default;
+$form-disabled-primary-color: $purple-100 !default;
+$form-check-background-color: $white !default;
+$form-check-inner-box-shadow: inset 0 0 0 1px $grey-300 !default;
+$form-check-inner-box-shadow-active: inset 0 0 0 1px $form-primary-color !default;
+$form-check-input-checked-color: $white !default;
+$form-check-input-indeterminate-color: $white !default;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>") !default;
+$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
+$form-check-input-indeterminate-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-indeterminate-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/></svg>") !default;
+
+// Select
+
+$form-select-indicator-color: $body-text-color !default;
+$form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !default;
+
+// Characters which are escaped by the escape-svg function
+
+$escaped-characters: (
+  ("<", "%3c"),
+  (">", "%3e"),
+  ("#", "%23"),
+  ("(", "%28"),
+  (")", "%29")
+) !default;
+
+// Label
+
+$label-background-color: $purple;
+$label-border-radius: 12px;
