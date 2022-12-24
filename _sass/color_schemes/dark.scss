@@ -1,15 +1,13 @@
-$body-background-color: $grey-dk-300;
-$sidebar-color: $grey-dk-300;
-$border-color: $grey-dk-200;
-$body-text-color: $grey-lt-300;
-$body-heading-color: $grey-lt-000;
-$nav-child-link-color: $grey-dk-000;
-$search-result-preview-color: $grey-dk-000;
-$link-color: $blue-000;
-$btn-primary-color: $blue-200;
-$base-button-color: $grey-dk-250;
-$search-background-color: $grey-dk-250;
-$table-background-color: $grey-dk-250;
+$body-background-color: $grey-800;
+$sidebar-color: $grey-800;
+$border-color: $grey-600;
+$body-text-color: $grey-400;
+$body-heading-color: $grey-000;
+$nav-child-link-color: $grey-400;
+$search-result-preview-color: $grey-400;
+$btn-base-color: $grey-700;
+$search-background-color: $grey-700;
+$table-background-color: $grey-700;
 $feedback-color: darken($sidebar-color, 3%);
 
 // The following highlight theme is more legible than that used for the light color scheme
@@ -26,3 +24,10 @@ $code-background-color: #31343f;
 
 // @import "./vendor/OneDarkJekyll/syntax-firewatch-green";
 // $code-background-color: #282c34;
+
+$form-inner-box-shadow: inset 0 0 0 2px $grey-600;
+$form-disabled-background-color: $grey-700;
+$form-disabled-color: $grey-500;
+$form-disabled-primary-color: $green-300;
+$form-check-background-color: $grey-800;
+$form-check-inner-box-shadow: inset 0 0 0 1px $grey-600;

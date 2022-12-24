@@ -20,8 +20,9 @@ When you have [configured]({{ site.baseurl }}{% link docs/configuration.md %}#ca
     You can put the callout markup either before or after its content.
 
 #### An untitled callout
+<div class="code-example" markdown="1">
 {: .no_toc }
-
+</div>
 ```markdown
 {: .highlight }
 A paragraph

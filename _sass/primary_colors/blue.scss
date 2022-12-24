@@ -1,0 +1,9 @@
+// Theme color
+$link-color: $blue;
+$btn-primary-color: $blue;
+$btn-inner-box-shadow-active: inset 0 0 0 2px $btn-primary-color;
+$form-primary-color: $blue;
+$form-inner-box-shadow-active: inset 0 0 0 2px $form-primary-color;
+$form-outer-box-shadow-active: 0 0 0 3px rgba($form-primary-color, 0.25);
+$form-disabled-primary-color: $blue-100;
+$form-check-inner-box-shadow-active: inset 0 0 0 1px $form-primary-color;
