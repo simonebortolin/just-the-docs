@@ -356,3 +356,112 @@ legend {
     }
   }
 }
+
+.invalid-feedback,
+.valid-feedback {
+  display: none;
+}
+
+.was-validated {
+  .form-control,
+  .form-select {
+    &:invalid {
+      box-shadow: $form-inner-box-shadow-error;
+      background-image: escape-svg($form-error-indicator);
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 16px 16px;
+      padding-right: calc(1em + 16px);
+
+      &:active,
+      &:focus {
+        box-shadow: $form-inner-box-shadow-error, $form-outer-box-shadow-error;
+      }
+
+      ~ .invalid-feedback {
+        display: block;
+        color: $error-300;
+      }
+    }
+
+    &:valid {
+      box-shadow: $form-inner-box-shadow-success;
+      background-image: escape-svg($form-success-indicator);
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 16px 16px;
+      padding-right: calc(1em + 16px);
+
+      &:active,
+      &:focus {
+        box-shadow: $form-inner-box-shadow-success,
+          $form-outer-box-shadow-success;
+      }
+
+      ~ .valid-feedback {
+        display: block;
+        color: $success-300;
+      }
+    }
+  }
+
+  .form-check-input,
+  .task-list-item-checkbox {
+    &:invalid {
+      box-shadow: $form-check-inner-box-shadow-error;
+
+      &:hover,
+      &:active,
+      &:focus {
+        box-shadow: $form-check-inner-box-shadow-error,
+          $form-outer-box-shadow-error;
+      }
+
+      ~ .form-check-label {
+        color: $error-300;
+      }
+
+      ~ .invalid-feedback {
+        display: block;
+        color: $error-300;
+      }
+
+      &:checked,
+      &:indeterminate[type="checkbox"] {
+        background-color: $error-400;
+      }
+    }
+
+    &:valid {
+      box-shadow: $form-check-inner-box-shadow-success;
+
+      &:hover,
+      &:active,
+      &:focus {
+        box-shadow: $form-inner-box-shadow-success,
+          $form-outer-box-shadow-success;
+      }
+
+      ~ .form-check-label {
+        color: $success-300;
+      }
+
+      ~ .valid-feedback {
+        display: block;
+        color: $success-300;
+      }
+
+      &:checked,
+      &:indeterminate[type="checkbox"] {
+        background-color: $success-400;
+      }
+    }
+  }
+}
+
+:not(.was-validated) {
+  .invalid-feedback,
+  .valid-feedback {
+    display: none;
+  }
+}
