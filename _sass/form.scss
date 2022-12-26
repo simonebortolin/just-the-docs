@@ -378,6 +378,11 @@ legend {
         box-shadow: $form-inner-box-shadow-error, $form-outer-box-shadow-error;
       }
 
+      ~ .form-label {
+        display: block;
+        color: $error-300;
+      }
+
       ~ .invalid-feedback {
         display: block;
         color: $error-300;
