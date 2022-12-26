@@ -403,6 +403,11 @@ legend {
           $form-outer-box-shadow-success;
       }
 
+      ~ .form-label {
+        display: block;
+        color: $success-300;
+      }
+
       ~ .valid-feedback {
         display: block;
         color: $success-300;
