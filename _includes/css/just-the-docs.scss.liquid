@@ -2,6 +2,9 @@
 $logo: "{{ site.logo | relative_url }}";
 {% endif %}
 @import "./support/support";
+{% if include.primary_color %}
+    @import "./primary_colors/{{ include.primary_color }}";
+{% endif %}
 @import "./color_schemes/{{ include.color_scheme }}";
 @import "./modules";
 {% include css/callouts.scss.liquid color_scheme = include.color_scheme %}
