@@ -107,9 +107,24 @@ layout: table_wrappers
         <div></div>
       {% endif %}
       {% include header_custom.html %}
-      {% if site.aux_links or site.enable_switch_color_scheme == true %}
+      {% if site.aux_links or site.aux_buttons or site.enable_switch_color_scheme == true %}
         <nav aria-label="Auxiliary" class="aux-nav">
           <ul class="aux-nav-list">
+            {% for link in site.aux_buttons %}
+              <span class="site-button">
+                <a href="{{ link.link }}" class="btn btn-{{ link.color }}">{{ link.title }}
+                  {% if link.logo %}
+                  <img src="{{ link.logo }}"></img>
+                  {% endif %}
+                  {% if link.icon %}
+                  <svg>
+                    <use xlink:href="#svg-{{ link.icon }}"></use>
+                  </svg>
+                  </svg>
+                  {% endif %}
+                </a>
+              </span>
+            {% endfor %}
             {% for link in site.aux_links %}
               <li class="aux-nav-list-item">
                 <a href="{{ link.last }}" class="site-button"

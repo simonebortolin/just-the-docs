@@ -84,6 +84,17 @@ aux_links:
 aux_links_new_tab: false
 ```
 
+## Aux button
+
+```yaml
+# Aux button for the upper right navigation
+aux_buttons:
+  - title: "GitHub"
+    color: 'purple'
+    icon: 'github'
+    link: '//github.com/hack-gpon/hack-gpon.github.io'
+```
+
 ## Heading anchor links
 
 ```yaml
