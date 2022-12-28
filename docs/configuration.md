@@ -197,6 +197,13 @@ and `loud` when using the `dark color scheme.`
 
 See [Callouts]({{ site.baseurl }}{% link docs/ui-components/callouts.md %}) for more information.
 
+## Document modal
+
+- `enable_modal` enable modal
+
+See [Modal]({{ site.baseurl }}{% link docs/ui-components/modal.md %}) for more information.
+
+
 ## Google Analytics
 
 {: .warning }

@@ -522,6 +522,9 @@ jtd.onReady(function(){
   {%- if site.enable_switch_color_scheme != false %}
   initSwitchThemeButton();
   {%- endif %}
+  {%- if site.enable_modal != false %}
+  initModal();
+  {%- endif %}
   scrollNav();
 });
 
@@ -563,6 +566,37 @@ jtd.onReady(function(){
   });
 
 });
+
+
+function initModal() {
+  var modals = document.querySelectorAll("[data-jtd-modal]");
+  var modalToogles = document.querySelectorAll("[data-jtd-toogle=modal]");
+
+  [...modals].forEach(modal => {
+    var closeBtns = modal.getElementsByClassName("close");
+    [...closeBtns].forEach(closeBtn => {
+      closeBtn.addEventListener("click", (event) => {
+        modal.style.display = "none";
+        modal.dispatchEvent( new Event('modal-jtd-close'));
+      });
+    })
+  });
+
+  [...modalToogles].forEach(toogle => {
+    toogle.addEventListener("click", (event) => {
+      var modal = document.querySelector(toogle.getAttribute('data-jtd-target'));
+      modal.style.display = "block";
+      modal.dispatchEvent(new Event('modal-jtd-open'));
+    });
+  });
+
+  window.addEventListener("click", function(event) {
+    if ([...modals].filter(modal => modal.getAttribute("data-jtd-modal-backdrop") !== "static").includes(event.target)) {
+      event.target.dispatchEvent( new Event('modal-jtd-close'));
+      event.target.style.display = "none";
+    }
+  });
+}
 
 {%- endif %}
 

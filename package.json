@@ -13,7 +13,7 @@
     "stylelint-prettier": "^2.0.0"
   },
   "scripts": {
-    "test": "stylelint '**/*.scss'",
+    "test": "stylelint **/*.scss",
     "format": "prettier --write '**/*.{scss,js,json}'",
     "stylelint-check": "stylelint-config-prettier-check"
   }
