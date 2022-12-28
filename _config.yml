@@ -97,6 +97,13 @@ aux_links:
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
 
+# Aux buttons for the upper right navigation
+aux_buttons:
+  - title: "GitHub"
+    color: 'purple'
+    icon: 'github'
+    link: '//github.com/hack-gpon/hack-gpon.github.io'
+
 # Sort order for navigation links
 # nav_sort: case_insensitive # default, equivalent to nil
 nav_sort: case_sensitive # Capital letters sorted before lowercase
