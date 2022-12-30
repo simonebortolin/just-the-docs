@@ -5,7 +5,7 @@ $logo: "{{ site.logo | relative_url }}";
 {% if include.primary_color %}
     @import "./primary_colors/{{ include.primary_color }}";
 {% endif %}
-@import "./color_schemes/{{ include.color_scheme | default: 'light' }}";
+@import "./color_schemes/{{ include.color_scheme | remove: 'auto' | default: 'light' }}";
 @import "./highlight/{{ include.highlight_color_scheme | default: 'light' }}";
 @import "./modules";
 {% include css/callouts.scss.liquid color_scheme = include.color_scheme %}
