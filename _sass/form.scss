@@ -3,10 +3,7 @@
 .form-control-plaintext {
   display: inline-block;
   box-sizing: border-box;
-  padding-top: 0.3em;
-  padding-right: 1em;
-  padding-bottom: 0.3em;
-  padding-left: 1em;
+  padding: 0.3em 1em;
   margin: 0;
   font-family: inherit;
   font-size: inherit;
@@ -77,10 +74,7 @@
     cursor: pointer;
 
     &::-ms-browse {
-      padding-top: 0.3em;
-      padding-right: 1em;
-      padding-bottom: 0.3em;
-      padding-left: 1em;
+      padding: 0.3em 1em;
       margin-top: -0.3em;
       margin-bottom: -0.3em;
       margin-left: -1em;
@@ -95,10 +89,7 @@
     }
 
     &::-webkit-file-upload-button {
-      padding-top: 0.3em;
-      padding-right: 1em;
-      padding-bottom: 0.3em;
-      padding-left: 1em;
+      padding: 0.3em 1em;
       margin-top: -0.3em;
       margin-bottom: -0.3em;
       margin-left: -1em;
@@ -113,10 +104,7 @@
     }
 
     &::file-selector-button {
-      padding-top: 0.3em;
-      padding-right: 1em;
-      padding-bottom: 0.3em;
-      padding-left: 1em;
+      padding: 0.3em 1em;
       margin-top: -0.3em;
       margin-bottom: -0.3em;
       margin-left: -1em;
