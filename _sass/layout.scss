@@ -168,7 +168,11 @@ button.site-button {
   &:hover,
   &:focus,
   &:active {
-    :not(.btn) .site-button-icon {
+    .btn .site-button-icon {
+      color: $white;
+    }
+    
+    .site-button-icon {
       color: $link-color;
     }
   }
