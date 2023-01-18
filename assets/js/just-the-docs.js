@@ -570,7 +570,7 @@ jtd.onReady(function(){
 
 function initModal() {
   var modals = document.querySelectorAll("[data-jtd-modal]");
-  var modalToogles = document.querySelectorAll("[data-jtd-toogle=modal]");
+  var modalToggles = document.querySelectorAll("[data-jtd-toggle=modal]");
 
   [...modals].forEach(modal => {
     var closeBtns = modal.getElementsByClassName("close");
@@ -582,9 +582,9 @@ function initModal() {
     })
   });
 
-  [...modalToogles].forEach(toogle => {
-    toogle.addEventListener("click", (event) => {
-      var modal = document.querySelector(toogle.getAttribute('data-jtd-target'));
+  [...modalToggles].forEach(toggle => {
+    toggle.addEventListener("click", (event) => {
+      var modal = document.querySelector(toggle.getAttribute('data-jtd-target'));
       modal.style.display = "block";
       modal.dispatchEvent(new Event('modal-jtd-open'));
     });
